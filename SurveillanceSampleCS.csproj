@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9CCF739-6570-4FFA-9A39-09E18FB7D218}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <StartupObject>Neurotec.Samples.Code.Program</StartupObject>
+    <RootNamespace>Neurotec.Samples</RootNamespace>
+    <AssemblyName>SurveillanceSampleCS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>..\..\..\..\Resources\Neurotechnology.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>default</LangVersion>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Neurotec, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Gui, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.Gui.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Devices, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Devices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Gui, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Gui.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Licensing, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Licensing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Media, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Media.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Media.Processing, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Media.Processing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Surveillance, Version=6.0.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Surveillance.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Bin\dotNET\System.Data.SQLite.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Forms\AddToWatchListForm.resx">
+      <DependentUpon>AddToWatchListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\ChangeLicensePlateRecordForm.resx">
+      <DependentUpon>ChangeLicensePlateRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConnectToDeviceForm.resx">
+      <DependentUpon>ConnectToDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\Forms\DetailsFilterForm.resx">
+      <DependentUpon>DetailsFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailsView.resx">
+      <DependentUpon>DetailsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\EnrollForm.resx">
+      <DependentUpon>EnrollForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\ExportEventsForm.resx">
+      <DependentUpon>ExportEventsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\FacesWatchlistForms.resx">
+      <DependentUpon>FacesWatchlistForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImageView.resx">
+      <DependentUpon>ImageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\LicensePlateWatchlistForm.resx">
+      <DependentUpon>LicensePlateWatchlistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LongActionDialog.resx">
+      <DependentUpon>LongActionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OnvifConfigDialog.resx">
+      <DependentUpon>OnvifConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptimizationDialog.resx">
+      <DependentUpon>OptimizationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\Forms\PresetsForm.resx">
+      <DependentUpon>PresetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\Forms\PriorityCountriesForm.resx">
+      <DependentUpon>PriorityCountriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\Forms\SelectFilterForm.resx">
+      <DependentUpon>SelectFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\Forms\SourceConfigurationForm.resx">
+      <DependentUpon>SourceConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SourceControl.resx">
+      <DependentUpon>SourceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SourceHeader.resx">
+      <DependentUpon>SourceHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SubjectForm.resx">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SubjectsView.resx">
+      <DependentUpon>SubjectsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SurveillanceView.resx">
+      <DependentUpon>SurveillanceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VideoForm.resx">
+      <DependentUpon>VideoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewsPanel.resx">
+      <DependentUpon>ViewsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Common\CS\Utils.cs">
+      <Link>Code\Utils.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\CaptureEventData.cs" />
+    <Compile Include="Data\RecordSource.cs" />
+    <Compile Include="Drawing\TrackLinePainter.cs" />
+    <Compile Include="Drawing\TriggerPainter.cs" />
+    <Compile Include="Code\NAnalyticEventExtensions.cs" />
+    <Compile Include="Config\DetailsFilter.cs" />
+    <Compile Include="Config\Forms\Tools\ICompleableTool.cs" />
+    <Compile Include="Config\Forms\Tools\TriggerSelectionTool.cs" />
+    <Compile Include="Config\SearchAreaType.cs" />
+    <Compile Include="Data\FaceCollection.cs" />
+    <Compile Include="Config\Filter.cs" />
+    <Compile Include="Data\LicensePlateCollection.cs" />
+    <Compile Include="Config\Preset.cs" />
+    <Compile Include="Config\RecentSourceConfig.cs" />
+    <Compile Include="Data\Record.cs" />
+    <Compile Include="Data\RecordCollection.cs" />
+    <Compile Include="Config\RegionTriggerType.cs" />
+    <Compile Include="Config\SourceConfiguration.cs" />
+    <Compile Include="Code\SourceController.cs" />
+    <Compile Include="Config\SurveillanceConfig.cs" />
+    <Compile Include="Config\TriggerType.cs" />
+    <Compile Include="Config\TripwireTriggerType.cs" />
+    <Compile Include="Data\Forms\AddToWatchListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\AddToWatchListForm.Designer.cs">
+      <DependentUpon>AddToWatchListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Forms\ChangeLicensePlateRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\ChangeLicensePlateRecordForm.Designer.cs">
+      <DependentUpon>ChangeLicensePlateRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Forms\DetailsFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\Forms\DetailsFilterForm.Designer.cs">
+      <DependentUpon>DetailsFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\SearchAreaPainter.cs" />
+    <Compile Include="Drawing\TriggerDrawingExtensions.cs" />
+    <Compile Include="Forms\DetailsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailsView.Designer.cs">
+      <DependentUpon>DetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\EnrollForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\EnrollForm.Designer.cs">
+      <DependentUpon>EnrollForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Forms\ExportEventsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\ExportEventsForm.Designer.cs">
+      <DependentUpon>ExportEventsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Forms\FacesWatchlistForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\FacesWatchlistForms.Designer.cs">
+      <DependentUpon>FacesWatchlistForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImageView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\LicensePlateWatchlistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\LicensePlateWatchlistForm.Designer.cs">
+      <DependentUpon>LicensePlateWatchlistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OnvifConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OnvifConfigDialog.Designer.cs">
+      <DependentUpon>OnvifConfigDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OptimizationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OptimizationDialog.Designer.cs">
+      <DependentUpon>OptimizationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\PathUtils.cs" />
+    <Compile Include="Config\Forms\PresetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\Forms\PresetsForm.Designer.cs">
+      <DependentUpon>PresetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Forms\PriorityCountriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\Forms\PriorityCountriesForm.Designer.cs">
+      <DependentUpon>PriorityCountriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Forms\SelectFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\Forms\SelectFilterForm.Designer.cs">
+      <DependentUpon>SelectFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Forms\SourceConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\Forms\SourceConfigurationForm.Designer.cs">
+      <DependentUpon>SourceConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SourceCheckState.cs" />
+    <Compile Include="Forms\SourceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SourceControl.Designer.cs">
+      <DependentUpon>SourceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SourceHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SourceHeader.Designer.cs">
+      <DependentUpon>SourceHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SourcesPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\SubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SubjectForm.Designer.cs">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SubjectsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SubjectsView.Designer.cs">
+      <DependentUpon>SubjectsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SurveillanceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SurveillanceView.Designer.cs">
+      <DependentUpon>SurveillanceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\Forms\Tools\GridTool.cs" />
+    <Compile Include="Config\Forms\Tools\PolygonSelectionTool.cs" />
+    <Compile Include="Config\Forms\Tools\ToolData.cs" />
+    <Compile Include="Config\Forms\Tools\Tool.cs" />
+    <Compile Include="Config\Forms\Tools\UndoStack.cs" />
+    <Compile Include="Forms\ViewsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\EventData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\SubjectInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\ConnectToDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConnectToDeviceForm.designer.cs">
+      <DependentUpon>ConnectToDeviceForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LongActionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LongActionDialog.designer.cs">
+      <DependentUpon>LongActionDialog.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config\Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\Forms\SettingsForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Forms\VideoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VideoForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VideoForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\Delete.png" />
+    <Content Include="Resources\Filter.png" />
+    <Content Include="Resources\ExitFullScreen.png" />
+    <None Include="Resources\Polygon.png" />
+    <None Include="Resources\Rectangle.png" />
+    <None Include="Resources\RectangleRed.png" />
+    <None Include="Resources\PolygonRed.png" />
+    <None Include="Resources\PolygonRedCrosed.png" />
+    <Content Include="Resources\line.png" />
+    <Content Include="Resources\Pin.png" />
+    <None Include="Resources\save.png" />
+    <Content Include="Resources\scene.png" />
+    <Content Include="Resources\SearchArea.png" />
+    <Content Include="Resources\ShowTriggerOverlay.png" />
+    <Content Include="Resources\SubjectVisualization.png" />
+    <None Include="Resources\Tripwire.png" />
+    <Content Include="Resources\Unknown.png" />
+    <Content Include="Resources\up.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\CrosedEye.png" />
+    <None Include="Resources\Eye.png" />
+    <None Include="Resources\%24this.Icon.ico" />
+    <Content Include="Resources\down.png" />
+    <Content Include="Resources\face.png" />
+    <Content Include="Resources\Help.png" />
+    <None Include="Resources\Layout1_1x1.png" />
+    <None Include="Resources\Layout2_1x2.png" />
+    <None Include="Resources\Layout2_2x1.png" />
+    <None Include="Resources\Layout3_1_2x1.png" />
+    <None Include="Resources\Layout3_1x3.png" />
+    <None Include="Resources\Layout3_3x1.png" />
+    <None Include="Resources\Layout4_1_1x3.png" />
+    <None Include="Resources\Layout4_1_3x1.png" />
+    <None Include="Resources\Layout4_2x2.png" />
+    <None Include="Resources\Layout5_2x1_3x1.png" />
+    <None Include="Resources\Layout6_1_5.png" />
+    <None Include="Resources\Layout6_2x3.png" />
+    <None Include="Resources\Layout6_3x2.png" />
+    <Content Include="Resources\key.png" />
+    <Content Include="Resources\Layout10_2x1_4x2.png" />
+    <Content Include="Resources\Layout8_2x2_4x1.png" />
+    <Content Include="Resources\Layout9_3x3.png" />
+    <Content Include="Resources\LicensePlate.png" />
+    <Content Include="Resources\Next.png" />
+    <Content Include="Resources\Objects.png" />
+    <Content Include="Resources\Play.png" />
+    <Content Include="Resources\Previous.png" />
+    <Content Include="Resources\Replay.png" />
+    <Content Include="Resources\rotate.png" />
+    <Content Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

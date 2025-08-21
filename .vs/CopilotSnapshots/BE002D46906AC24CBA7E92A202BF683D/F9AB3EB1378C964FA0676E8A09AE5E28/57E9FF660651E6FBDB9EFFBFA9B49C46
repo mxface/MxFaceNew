@@ -1,0 +1,36 @@
+﻿@* SourceControlFaces.razor: Blazor version of the faces part of SourceControl *@
+
+<div class="source-control-faces">
+    <div class="header">
+        <label class="source-name">@SourceName</label>
+    </div>
+    <div class="modalities-toolbar">
+        <button class="faces-toggle" @onclick="ToggleFaces">
+            <img src="/images/face.png" alt="Faces" style="height:20px;vertical-align:middle;" />
+            <span style="margin-left:5px;">Faces</span>
+        </button>
+    </div>
+    <div class="preset-label">
+        <label>@PresetLabel</label>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string SourceName { get; set; } = "SourceName";
+
+    [Parameter]
+    public string PresetLabel { get; set; } = "Preset: Default";
+
+    [Parameter]
+    public bool FacesEnabled { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> FacesEnabledChanged { get; set; }
+
+    private void ToggleFaces()
+    {
+        FacesEnabled = !FacesEnabled;
+        FacesEnabledChanged.InvokeAsync(FacesEnabled);
+    }
+}

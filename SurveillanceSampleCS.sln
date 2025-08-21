@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveillanceSampleCS", "SurveillanceSampleCS.csproj", "{A9CCF739-6570-4FFA-9A39-09E18FB7D218}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win64_x64 = Debug|Win64_x64
+		Release|Win64_x64 = Release|Win64_x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9CCF739-6570-4FFA-9A39-09E18FB7D218}.Debug|Win64_x64.ActiveCfg = Debug|x64
+		{A9CCF739-6570-4FFA-9A39-09E18FB7D218}.Debug|Win64_x64.Build.0 = Debug|x64
+		{A9CCF739-6570-4FFA-9A39-09E18FB7D218}.Release|Win64_x64.ActiveCfg = Release|x64
+		{A9CCF739-6570-4FFA-9A39-09E18FB7D218}.Release|Win64_x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
