@@ -1,0 +1,55 @@
+@page "/"
+@inject SentiVeillanceService SentiService
+@inject SurveillanceEngineService Engine
+
+<h1>Surveillance Sample</h1>
+
+@if (_status is null)
+{
+    <p>Checking licenses...</p>
+}
+else
+{
+    <p>Trial mode: @_status.TrialMode</p>
+    <ul>
+        @foreach (var kv in _status.Components)
+        {
+            <li>@kv.Key: @(kv.Value ? "Obtained" : "Missing")</li>
+        }
+    </ul>
+    @if (!_status.AnyComponentLicensed && _status.Error is not null)
+    {
+        <p class="text-danger">@_status.Error</p>
+    }
+    else
+    {
+        <button @onclick="ToggleEngine" class="btn btn-primary">@(_engineStarted ? "Stop" : "Start") Engine</button>
+        @if (_engineStarted)
+        {
+            <p class="text-success">Engine running...</p>
+        }
+    }
+}
+
+@code {
+    private LicenseStatus? _status;
+    private bool _engineStarted;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _status = await SentiService.EnsureLicensesAsync();
+    }
+
+    private async Task ToggleEngine()
+    {
+        if (_engineStarted)
+        {
+            Engine.Stop();
+            _engineStarted = false;
+        }
+        else if (_status?.AnyComponentLicensed == true)
+        {
+            _engineStarted = await Engine.StartAsync();
+        }
+    }
+}

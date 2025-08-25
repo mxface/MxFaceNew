@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../Code/*.cs" Exclude="../Code/Program.cs" />
+    <Compile Include="../Config/*.cs" />
+    <Compile Include="../Data/*.cs" />
+    <Compile Include="../Drawing/*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Neurotec.Licensing">
+      <HintPath>../Bin/Neurotec.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Surveillance">
+      <HintPath>../Bin/Neurotec.Surveillance.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
