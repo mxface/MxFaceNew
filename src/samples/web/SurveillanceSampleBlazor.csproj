@@ -38,11 +38,9 @@
     <Reference Include="Neurotec.Surveillance">
       <HintPath>../../../Bin/Neurotec.Surveillance.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite">
-      <HintPath>../../../Bin/System.Data.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>../../../packages/Newtonsoft.Json.13.0.3/lib/net45/Newtonsoft.Json.dll</HintPath>
-    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
   </ItemGroup>
 </Project>
