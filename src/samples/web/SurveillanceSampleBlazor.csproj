@@ -11,11 +11,38 @@
     <Compile Include="../../../Drawing/*.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Neurotec">
+      <HintPath>../../../Bin/Neurotec.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics">
+      <HintPath>../../../Bin/Neurotec.Biometrics.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Gui">
+      <HintPath>../../../Bin/Neurotec.Biometrics.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Devices">
+      <HintPath>../../../Bin/Neurotec.Devices.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Gui">
+      <HintPath>../../../Bin/Neurotec.Gui.dll</HintPath>
+    </Reference>
     <Reference Include="Neurotec.Licensing">
       <HintPath>../../../Bin/Neurotec.Licensing.dll</HintPath>
     </Reference>
+    <Reference Include="Neurotec.Media">
+      <HintPath>../../../Bin/Neurotec.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Media.Processing">
+      <HintPath>../../../Bin/Neurotec.Media.Processing.dll</HintPath>
+    </Reference>
     <Reference Include="Neurotec.Surveillance">
       <HintPath>../../../Bin/Neurotec.Surveillance.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>../../../Bin/System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../../../packages/Newtonsoft.Json.13.0.3/lib/net45/Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
